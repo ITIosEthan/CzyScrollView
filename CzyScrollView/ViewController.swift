@@ -22,9 +22,6 @@ var centerIndex:NSInteger = 0
 var leftIndex:NSInteger = 0
 var rightIndex:NSInteger = 0
 
-//记录滑动的距离
-var lastScrollDistance:NSInteger? = 0
-
 class ViewController: UIViewController , UIScrollViewDelegate {
 
     var imageNames:[String] = {
@@ -81,11 +78,6 @@ class ViewController: UIViewController , UIScrollViewDelegate {
 }
 
 extension ViewController{
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
-        lastScrollDistance = (NSInteger)(scrollView.contentOffset.x)
-    }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         
