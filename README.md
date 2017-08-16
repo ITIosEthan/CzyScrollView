@@ -1,11 +1,11 @@
-# 三张imageView实现多图循环滚动
+####### 三张imageView实现多图循环滚动
 
 ```
-            //设置默认图片
-            centerImageView?.image = UIImage(named: self.imageNames[centerIndex])
+        //设置默认图片
+        centerImageView?.image = UIImage(named: self.imageNames[centerIndex])
 
-            //三张图片 默认显示第一张
-            scrollView?.contentOffset = CGPoint.init(x: kCzyFullWidth, y: 0)
+        //三张图片 默认显示第一张
+        scrollView?.contentOffset = CGPoint.init(x: kCzyFullWidth, y: 0)
 ```
 
 ```
