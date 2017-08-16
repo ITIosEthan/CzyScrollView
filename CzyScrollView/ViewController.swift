@@ -90,9 +90,6 @@ extension ViewController{
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         
         let currentOffsetX:CGFloat = scrollView.contentOffset.x
-
-        
-        print("current index = \(currentOffsetX/kCzyFullWidth)")
         
         if currentOffsetX > kCzyFullWidth {
             
@@ -102,9 +99,7 @@ extension ViewController{
             
             centerIndex = (centerIndex+self.imageNames.count-1) % self.imageNames.count
         }
-        
-        print("center index = \(centerIndex)")
-        
+                
         //设置中间图片内容
         centerImageView?.image = UIImage(named: "\(centerIndex+1)")
         
@@ -117,14 +112,9 @@ extension ViewController{
         //此时 滚动的时候会出现白边左边 是因为没有设置左右两张图片内容
         leftIndex = (centerIndex + self.imageNames.count - 1) % self.imageNames.count
         rightIndex = (centerIndex + 1) % self.imageNames.count
-        
-        print("leftIndex = \(leftIndex) \n rightIndex = \(rightIndex)")
-        
+                
         leftImageView?.image = UIImage.init(named: "\(leftIndex)")
         rightImageView?.image = UIImage.init(named: "\(rightIndex)")
-        
-        
-
     }
 }
 
